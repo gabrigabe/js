@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="max-width: 50%; margin: 50px auto;">
+        <input class="form-control" type="text" id="cpf" value="123.456.789-10" />
+      </div>
+      
+      <script>
+       const $campoCPF = document.querySelector('#cpf')
+      
+       $campoCPF.addEventListener('focusin', (event) => {
+         $valorDoCPF = event.target.value;
+         $campoCPF.value = $valorDoCPF.replace(/[.-]/g, "")
+       })
+        
+       $campoCPF.addEventListener('focusout', () => {
+         $valorDoCPF = event.target.value;
+         $campoCPF.value = $valorDoCPF.replace(/(\d{3})?(\d{3})?(\d{3})?(\d{2})/, "$1.$2.$3-$4")
+       })
+      </script>
+</body>
+</html>
