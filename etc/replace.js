@@ -15,9 +15,9 @@ const cpfFormatado = cpf.replace(/(\d{3})?(\d{3})?(\d{3})?(\d{2})/, function(mat
 console.log(cpfFormatado) // O retorno seria 256.846.770-37
 
 
-const frasesemespaco = 'umafrasesemespaços';
+const frasesemespaco = 'umafrasesemespacos';
 
-const frasecomespaco = frasesemespaco.replace(/(\w{3})?(\w{5})?(\w{3})?(\w{7})?/, '$1 $2 $3 $4');
+const frasecomespaco = frasesemespaco.replace(/(\w{3})?(\w{5})?(\w{3})?(\w{7})/, '$1 $2 $3 $4');
 
 console.log(frasecomespaco);
 
